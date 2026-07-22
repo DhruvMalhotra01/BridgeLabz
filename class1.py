@@ -1,1 +1,1 @@
-print("Hello World!")
+a = 10.5
