@@ -49,7 +49,20 @@ x = 4
 
 # if x == 1 or x == 2 or x == 3:
 
-if x in [1,3,2]:
-    print("find the number")
-else:
-    print("not found")
+# if x in [1,3,2]:
+#     print("find the number")
+# else:
+#     print("not found")
+
+def my_func(x):
+    def wrapper():
+        print("BEFORe")
+        x()
+        print("AFTER")
+    return wrapper
+
+@my_func
+def greet():
+    print("hello")
+
+greet()
